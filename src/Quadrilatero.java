@@ -1,8 +1,7 @@
-
-public class Retangulo extends FiguraGeometrica{
+public class Quadrilatero extends FiguraGeometrica{
     /* private int identificador;*/
 
-    public Retangulo(double largura, double comprimento){
+    public Quadrilatero(double largura, double comprimento){
         super("RETÂNGULO", largura, comprimento, largura, comprimento);
         this.setbase(largura);
         this.setAltura(comprimento);
@@ -12,9 +11,9 @@ public class Retangulo extends FiguraGeometrica{
     public void enquadrar(){
         double novoLadoTamanho = Math.rint(this.getbase() + this.getAltura()/2);
         this.setAltura(novoLadoTamanho);
-        this.setbase(novoLadoTamanho);    
+        this.setbase(novoLadoTamanho);
+        this.setFormaNome("QUADRADO");    
     }
-
 
 
 }

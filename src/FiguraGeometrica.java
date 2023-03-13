@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class FiguraGeometrica{
    
@@ -26,9 +25,13 @@ public class FiguraGeometrica{
         return formaNome;
     }
 
+    public void setFormaNome(String Nome){
+        this.formaNome=Nome;   
+    }
+
     /**
      * @return Double return the base
-     */
+    */
     public Double getbase() {
         return base;
     }
@@ -65,11 +68,17 @@ public class FiguraGeometrica{
         this.lados.set(posicao, NovoLado);
     }
 
+    public double getLado(int posicao   ){
+        return this.lados.get(posicao);
+    }
+
     public Double calcularPerimetro(){
         Double soma = lados.stream().reduce((double) 0, Double::sum);
         return soma;
     };
 
+
+    
     public Double calcularArea(){
         return this.altura * this.base;
     };
